@@ -22,6 +22,14 @@ PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
 
+# Blur
+ifeq ($(XDROID_UI_BLUR), true)
+$(warning "xdroidUI: BlurUI has been enabled.")
+PRODUCT_PRODUCT_PROPERTIES += \
+    ro.sf.blurs_are_expensive=1 \
+    ro.surface_flinger.supports_background_blur=1
+endif
+
 # build.prop entrys
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wallpapers_loc_request_suw=true
