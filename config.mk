@@ -64,24 +64,15 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     WallpaperPickerGoogleRelease
 
-# Bootanimation
-ifeq ($(TARGET_BOOT_ANIMATION_RES),1080)
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),1440)
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation-dark_1440.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else ifeq ($(TARGET_BOOT_ANIMATION_RES),720)
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation_720.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation-dark_720.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+# xd. Bootanimation
+ifeq ($(XDROID_BOOT_DARK),true)
+    $(warning "xdroidUI: Using Dark xd. Bootanimation")
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 else
-    ifeq ($(TARGET_BOOT_ANIMATION_RES),)
-        $(warning "xdroidUI: TARGET_BOOT_ANIMATION_RES is undefined, assuming 1080p")
-    else
-        $(warning "xdroidUI: Current bootanimation res is not supported, forcing 1080p")
-    endif
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/bootanimation-dark_1080.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+    $(warning "xdroidUI: Using Light xd. Bootanimation")
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
 
 # Copy files
