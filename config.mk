@@ -64,6 +64,9 @@ PRODUCT_PACKAGES += \
     ThemePicker \
     WallpaperPickerGoogleRelease
 
+# Plugins
+include packages/apps/Plugins/plugins.mk
+
 # xd. Bootanimation
 ifeq ($(XDROID_BOOT_DARK),true)
     $(warning "xdroidUI: Using Dark xd. Bootanimation")
