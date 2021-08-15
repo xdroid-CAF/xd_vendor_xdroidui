@@ -13,18 +13,19 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := $(call my-dir)
+ROOT_PATH := $(call my-dir)
+XDUI_PATH := vendor/xdroidui
 
-include $(call all-subdir-makefiles,$(LOCAL_PATH))
+include $(call all-subdir-makefiles,$(ROOT_PATH))
 
 # xdroidUI Overlays
-include $(LOCAL_PATH)/configs/xdroidui_overlays.mk
+include $(XDUI_PATH)/configs/xdroidui_overlays.mk
 
 # xdroidUI Packages
-include $(LOCAL_PATH)/configs/xdroidui_packages.mk
+include $(XDUI_PATH)/configs/xdroidui_packages.mk
 
 # xdroidUI Props
-include $(LOCAL_PATH)/configs/xdroidui_props.mk
+include $(XDUI_PATH)/configs/xdroidui_props.mk
 
 # xdroidUI Ui
-include $(LOCAL_PATH)/configs/xdroidui_ui.mk
+include $(XDUI_PATH)/configs/xdroidui_ui.mk
