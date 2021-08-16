@@ -13,16 +13,23 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# xd. Bootanimation
-ifeq ($(XDROID_BOOT_DARK),true)
-    $(warning "xdroidUI: Using Dark xd. Bootanimation")
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-else
-    $(warning "xdroidUI: Using Light xd. Bootanimation")
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
-    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
-endif
+# xd. Bootanimation Indonesia Independence Day 76th
+# by Friction
+
+# Disabling Regular Bootanimation for this time
+# ifeq ($(XDROID_BOOT_DARK),true)
+#    $(warning "xdroidUI: Using Dark xd. Bootanimation")
+#    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+#    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_dark.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+# else
+#    $(warning "xdroidUI: Using Light xd. Bootanimation")
+#    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+#    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_light.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
+# endif
+
+$(warning "xdroidUI: Dirgahayu Indonesia | Forcing use Indonesia Independence Day 76th Bootanimation")
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_ind-76.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
+    PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_ind-76.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 
 # Copy files
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/xdroidui/etc,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc)
