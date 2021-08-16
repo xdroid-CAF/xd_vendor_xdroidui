@@ -17,5 +17,5 @@
 -->
 <resources>
     <!-- dimensions for the navigation bar handle -->
-    <dimen name="navigation_home_handle_width">140dp</dimen>
+    <dimen name="navigation_home_handle_width">145dp</dimen>
 </resources>
