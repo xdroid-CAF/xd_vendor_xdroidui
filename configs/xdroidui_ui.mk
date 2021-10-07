@@ -13,6 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+XDUI_PATH := vendor/xdroidui
+
 # xd. Bootanimation
 ifeq ($(XDROID_BOOT_DARK),true)
 $(warning "xdroidUI: Using Dark xd. Bootanimation")
@@ -32,6 +34,10 @@ $(warning "xdroidUI: Dirgahayu Indonesia | Forcing use Indonesia Independence Da
     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_ind-76.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
 
+# Fonts
+PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,$(XDUI_PATH)/fonts/ttf,$(TARGET_COPY_OUT_PRODUCT)/fonts)
+PRODUCT_COPY_FILES += \
+    $(XDUI_PATH)/fonts/fonts_customization.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/fonts_customization.xml
+
 # Copy files
 PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/xdroidui/etc,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/xdroidui/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)
