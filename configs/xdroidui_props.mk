@@ -13,15 +13,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# Blur
-ifeq ($(XDROID_UI_BLUR), true)
-$(warning "xdroidUI: BlurUI has been enabled.")
-PRODUCT_PRODUCT_PROPERTIES += \
-    ro.sf.blurs_are_expensive=1 \
-    ro.surface_flinger.supports_background_blur=1 \
-    persist.sys.sf.disable_blurs=1
-endif
-
 # build.prop entrys
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wallpapers_loc_request_suw=true

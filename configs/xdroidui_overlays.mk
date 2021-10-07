@@ -17,9 +17,3 @@
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/xdroidui/overlay
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/xdroidui/overlay/common/
-
-# Navbar
-PRODUCT_PACKAGES += \
-    GesturalNavigationOverlayLong \
-    GesturalNavigationOverlayMedium \
-    GesturalNavigationOverlayHidden

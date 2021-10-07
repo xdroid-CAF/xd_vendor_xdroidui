@@ -31,7 +31,3 @@ $(warning "xdroidUI: Dirgahayu Indonesia | Forcing use Indonesia Independence Da
     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_ind-76.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation.zip
     PRODUCT_COPY_FILES += vendor/xdroidui/bootanimation/xd_boot_ind-76.zip:$(TARGET_COPY_OUT_PRODUCT)/media/bootanimation-dark.zip
 endif
-
-# Copy files
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/xdroidui/etc,$(TARGET_COPY_OUT_SYSTEM_EXT)/etc)
-PRODUCT_COPY_FILES += $(call find-copy-subdir-files,*,vendor/xdroidui/fonts,$(TARGET_COPY_OUT_PRODUCT)/fonts)

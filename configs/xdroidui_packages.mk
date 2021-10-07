@@ -17,13 +17,3 @@
 PRODUCT_PACKAGES += \
     charger_res_images \
     product_charger_res_images
-
-# Apps
-PRODUCT_PACKAGES += \
-    NexusLauncherRelease \
-    PixelThemesStub \
-    ThemePicker \
-    WallpaperPickerGoogleRelease
-
-# Volume Plugins
-include packages/apps/Plugins/plugins.mk
