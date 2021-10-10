@@ -17,14 +17,6 @@
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.wallpapers_loc_request_suw=true
 
-# Setup Wizard
-PRODUCT_PRODUCT_PROPERTIES += \
-    setupwizard.enable_assist_gesture_training=true \
-    setupwizard.feature.baseline_setupwizard_enabled=true \
-    setupwizard.feature.show_pixel_tos=true \
-    setupwizard.feature.show_support_link_in_deferred_setup=false \
-    setupwizard.theme=glif_v3_light
-
 # Gestures
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.boot.vendor.overlay.theme=com.android.internal.systemui.navbar.gestural
