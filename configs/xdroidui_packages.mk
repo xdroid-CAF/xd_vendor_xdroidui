@@ -13,6 +13,10 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+# Style
+PRODUCT_PACKAGES += \
+    ThemePicker
+
 # Offline charger
 PRODUCT_PACKAGES += \
     charger_res_images \
