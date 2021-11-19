@@ -20,10 +20,8 @@ PRODUCT_PACKAGES += \
 
 # Apps
 PRODUCT_PACKAGES += \
-    NexusLauncherRelease \
-    PixelThemesStub \
-    ThemePicker \
-    WallpaperPickerGoogleRelease
+    Lawnchair \
+    ThemePicker
 
 # Volume Plugins
 include packages/apps/Plugins/plugins.mk
