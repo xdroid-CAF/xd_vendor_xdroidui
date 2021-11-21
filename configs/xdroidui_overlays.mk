@@ -17,3 +17,6 @@
 PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/xdroidui/overlay
 DEVICE_PACKAGE_OVERLAYS += \
     vendor/xdroidui/overlay/common/
+
+PRODUCT_PACKAGES += \
+    CustomPixelLauncherOverlay
