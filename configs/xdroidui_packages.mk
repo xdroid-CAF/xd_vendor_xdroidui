@@ -21,7 +21,8 @@ PRODUCT_PACKAGES += \
 # Apps
 PRODUCT_PACKAGES += \
     Lawnchair \
-    ThemePicker
+    ThemePicker \
+    GamingMode
 
 # Volume Plugins
 include packages/apps/Plugins/plugins.mk
